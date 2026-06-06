@@ -1,0 +1,10 @@
+SELECT COUNT(DISTINCT r.rider_id) AS retained_riders_2021
+FROM "Riders" rd
+JOIN "Rides" r ON r.rider_id = rd.rider_id
+WHERE TO_TIMESTAMP(r.signup_date, 'MM/DD/YYYY HH24:MI')
+  BETWEEN TO_TIMESTAMP('01/01/2021 00:00', 'MM/DD/YYYY HH24:MI')
+  AND TO_TIMESTAMP('12/31/2021 23:59', 'MM/DD/YYYY HH24:MI')
+  AND TO_TIMESTAMP(rd.request_time, 'MM/DD/YYYY HH24:MI')
+  BETWEEN TO_TIMESTAMP('01/01/2024 00:00', 'MM/DD/YYYY HH24:MI')
+  AND TO_TIMESTAMP('12/31/2024 23:59', 'MM/DD/YYYY HH24:MI')
+  AND rd.status = 'completed';
