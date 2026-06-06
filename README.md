@@ -9,7 +9,7 @@ eight SQL analyses were conducted to uncover operational insights, revenue
 trends, and performance gaps.
 
 ## Dataset
-- Source: Provided by HNG Tech Internship Programme (2023)
+- Source: Provided by HNG Tech Internship Programme
 - Tables: Rides, Drivers, Riders, Payments
 - Period: June 2021 – December 2024
 
